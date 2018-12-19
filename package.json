@@ -18,7 +18,29 @@
   "jshintConfig": {
     "esversion": 6
   },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "targets": {
+            "browsers": [
+              "ie >= 11",
+              "iOS >= 10",
+              "android >= 4.4",
+              "last 1 versions"
+            ]
+          }
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
     "browser-sync": "^2.26.3",
     "delete-empty": "^2.0.0",
     "gulp": "^4.0.0",
@@ -26,7 +48,9 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "webpack": "^4.27.1",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {}
 }

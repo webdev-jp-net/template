@@ -78,6 +78,8 @@ root
 
 ## Package
 
+`gulp`ベースの開発環境。
+
 -  `gulp` ... ver4 (https://www.npmjs.com/package/gulp)
 
 -  `gulp-plumber` ... エラーでgulpのpipeを止めない (https://www.npmjs.com/package/gulp-plumber)
@@ -85,14 +87,33 @@ root
 
 ### clean
 
+データの削除に使用
+
 -  `rimraf` ... データ削除 (https://www.npmjs.com/package/rimraf)
 -  `delete-empty` ... 空ディレクトリ削除 (https://www.npmjs.com/package/delete-empty)
 
 ### server
 
+サーバを構築するとともに、更新をリアルタイム反映。
+
 -  `browser-sync` ... サーバ (https://www.npmjs.com/package/browser-sync)
 
 ### style
 
+`scss`で定義したスタイルをcssへ変換
+
 -  `gulp-sass` ... Sassをコンパイル (https://www.npmjs.com/package/gulp-sass)
 -  `gulp-autoprefixer` ... ベンダープレフィックス付与 (https://www.npmjs.com/package/gulp-autoprefixer)
+
+### script
+
+`babel`でトランスパイル。polyfill設定をシンプルにする目的で`webpack`を通している。
+
+-  `@babel/core` ... ver7 (https://www.npmjs.com/package/@babel/core)
+-  `@babel/polyfill` ... polyfill (https://www.npmjs.com/package/@babel/polyfill)
+-  `@babel/preset-env` ... トランスパイルのターゲットを設定 (https://www.npmjs.com/package/@babel/preset-env)
+
+
+-  `webpack` ... ver4 (https://www.npmjs.com/package/webpack)
+-  `webpack-stream` ... gulpでwebpackを使う (https://www.npmjs.com/package/webpack-stream)
+-  `babel-loader` ... webpackで*.jsをbabelでトランスパイルするよう紐付ける (https://www.npmjs.com/package/babel-loader)
