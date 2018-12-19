@@ -11,6 +11,10 @@ const browserSync = require("browser-sync");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 
+const webpack = require("webpack");
+const webpackStream = require("webpack-stream");
+const webpackConfig = require("./webpack.config.js");
+
 // Server
 // --------------------
 gulp.task("server", cb => {
@@ -45,7 +49,7 @@ gulp.task("copy:static", () =>
     .pipe(browserSync.stream())
 );
 
-// html
+// Html
 // --------------------
 gulp.task("html", () => {
   deleteEmpty.sync(`preview`);
@@ -60,12 +64,8 @@ gulp.task("html", () => {
 gulp.task("style", () =>
   gulp
     .src(`src/css/**/*.scss`)
-    .pipe(
-      plumber({
-        errorHandler: notify.onError("<%= error.message %>")
-      })
-    )
-    .pipe(sass().on('error', sass.logError))
+    .pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
+    .pipe(sass().on("error", sass.logError))
     .pipe(
       autoprefixer({
         browsers: [
@@ -81,10 +81,23 @@ gulp.task("style", () =>
     .pipe(browserSync.stream())
 );
 
+// Script
+// --------------------
+gulp.task("script", () =>
+  webpackStream(webpackConfig, webpack)
+    .on("error", function handleError() {
+      this.emit("end");
+    })
+    .pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
+    .pipe(gulp.dest(`preview`))
+    .pipe(browserSync.stream())
+);
+
 // watch
 // --------------------
 gulp.task("watch", cb => {
   gulp.watch([`src/css/**/*.scss`], gulp.series("style"));
+  gulp.watch([`src/js/**/*.js`], gulp.series("script"));
   gulp.watch([`src/html/**/*.html`], gulp.series("html"));
   cb();
 });
@@ -95,7 +108,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean:preview",
-    gulp.parallel("style", "html"),
+    gulp.parallel("style", "script", "html"),
     gulp.parallel("watch", "server")
   )
 );
