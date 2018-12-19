@@ -15,6 +15,11 @@
   "scripts": {
     "start": "gulp"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "delete-empty": "^2.0.0",
+    "gulp": "^4.0.0",
+    "rimraf": "^2.6.2"
+  },
   "dependencies": {}
 }

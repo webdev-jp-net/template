@@ -76,3 +76,15 @@ root
     └── *.html
 ```
 
+## Package
+
+-  `gulp` ... ver4 (https://www.npmjs.com/package/gulp)
+
+### clean
+
+-  `rimraf` ... データ削除 (https://www.npmjs.com/package/rimraf)
+-  `delete-empty` ... 空ディレクトリ削除 (https://www.npmjs.com/package/delete-empty)
+
+### server
+
+-  `browser-sync` ... サーバ (https://www.npmjs.com/package/browser-sync)
