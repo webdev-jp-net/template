@@ -15,6 +15,9 @@
   "scripts": {
     "start": "gulp"
   },
+  "jshintConfig": {
+    "esversion": 6
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "delete-empty": "^2.0.0",
