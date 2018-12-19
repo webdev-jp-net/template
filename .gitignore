@@ -1,3 +1,6 @@
+# ----------
+# general
+
 # file
 Thumbs.db
 .DS_Store
@@ -10,3 +13,9 @@ node_modules
 
 # exception
 !.gitkeep
+
+# ----------
+# custom
+
+# folder
+preview/
