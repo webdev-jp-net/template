@@ -80,6 +80,9 @@ root
 
 -  `gulp` ... ver4 (https://www.npmjs.com/package/gulp)
 
+-  `gulp-plumber` ... エラーでgulpのpipeを止めない (https://www.npmjs.com/package/gulp-plumber)
+-  `gulp-notify` ... デスクトップ通知 (https://www.npmjs.com/package/gulp-notify)
+
 ### clean
 
 -  `rimraf` ... データ削除 (https://www.npmjs.com/package/rimraf)
@@ -88,3 +91,8 @@ root
 ### server
 
 -  `browser-sync` ... サーバ (https://www.npmjs.com/package/browser-sync)
+
+### style
+
+-  `gulp-sass` ... Sassをコンパイル (https://www.npmjs.com/package/gulp-sass)
+-  `gulp-autoprefixer` ... ベンダープレフィックス付与 (https://www.npmjs.com/package/gulp-autoprefixer)

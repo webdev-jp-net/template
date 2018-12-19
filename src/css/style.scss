@@ -1,0 +1,14 @@
+body {
+  background: gray;
+  color: white;
+
+  $w_column: 1024px;
+
+  max-width: $w_column;
+  padding: 1rem;
+  margin: 0 auto;
+
+  h1 {
+    font-weight: normal;
+  }
+}
