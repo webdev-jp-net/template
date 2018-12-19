@@ -1,0 +1,12 @@
+# file
+Thumbs.db
+.DS_Store
+*.map
+
+# directory
+.git
+node_modules
+.sass-cache
+
+# exception
+!.gitkeep
