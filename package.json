@@ -1,0 +1,20 @@
+{
+  "name": "template",
+  "version": "0.1.0",
+  "description": "WEBサイト制作環境のテンプレート",
+  "author": "webdev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:webdev-jp-net/template.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
