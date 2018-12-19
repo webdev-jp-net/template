@@ -3,6 +3,32 @@ WEBサイト制作環境のテンプレートです。
 随時、新しい環境へ更新をかけていく予定です。
 
 ブランチで、`Riot.js`用`Vue.js`用など分岐できればと考えています。
+
+## Scripts
+
+### Install
+
+```
+$ npm install
+```
+
+### Run
+
+development mode
+
+```
+$ npm start
+```
+
+
+release mode
+
+```
+$ npm run release
+```
+
+
+
 # Directory
 
 ```
