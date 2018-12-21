@@ -15,6 +15,7 @@
   "scripts": {
     "prettier:scss": "prettier src/**/*.scss --write",
     "prettier:js": "prettier src/**/*.js --write",
+    "lint:js": "eslint --fix src/**/*.js",
     "start": "gulp"
   },
   "jshintConfig": {
@@ -38,6 +39,18 @@
       ]
     ]
   },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ]
+  },
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
@@ -55,6 +68,7 @@
     "babel-loader": "^8.0.4",
     "browser-sync": "^2.26.3",
     "delete-empty": "^2.0.0",
+    "eslint": "^5.10.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-notify": "^3.0.0",
