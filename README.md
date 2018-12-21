@@ -117,3 +117,13 @@ root
 -  `webpack` ... ver4 (https://www.npmjs.com/package/webpack)
 -  `webpack-stream` ... gulpでwebpackを使う (https://www.npmjs.com/package/webpack-stream)
 -  `babel-loader` ... webpackで*.jsをbabelでトランスパイルするよう紐付ける (https://www.npmjs.com/package/babel-loader)
+
+## Linter & Formatter
+
+`esLint`でJavaScriptの構文チェックを行い、`Prettier`で書式を整理
+
+-  `eslint` ... js構文チェック (https://www.npmjs.com/package/eslint)
+-  `eslint-plugin-prettier` ... PrettierのルールをesLintに読み込む (https://www.npmjs.com/package/eslint-plugin-prettier)
+-  `eslint-config-prettier` ... Prettierと重複したesLintルールを無効化 (https://www.npmjs.com/package/eslint-config-prettier)
+
+-  `prettier` ... 書式の整形 (https://www.npmjs.com/package/prettier)

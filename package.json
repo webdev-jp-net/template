@@ -48,8 +48,11 @@
       "es6": true
     },
     "extends": [
-      "eslint:recommended"
-    ]
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
   },
   "prettier": {
     "printWidth": 100,
@@ -69,6 +72,8 @@
     "browser-sync": "^2.26.3",
     "delete-empty": "^2.0.0",
     "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-notify": "^3.0.0",
