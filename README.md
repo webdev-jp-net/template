@@ -21,6 +21,18 @@ $ npm start
 ```
 
 
+```
+$ npm start:dev
+```
+
+#### production mode
+
+
+```
+$ npm start:pro
+```
+
+
 #### release mode
 
 ```

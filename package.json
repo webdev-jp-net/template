@@ -15,6 +15,8 @@
   "scripts": {
     "lint:js": "eslint --fix src/**/*.js",
     "lint:scss": "stylelint --fix src/**/*.scss",
+    "start:pro": "cross-env NODE_ENV=\"production\" gulp",
+    "start:dev": "cross-env NODE_ENV=\"development\" gulp",
     "start": "gulp"
   },
   "jshintConfig": {
