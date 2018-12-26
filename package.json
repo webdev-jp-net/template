@@ -16,6 +16,7 @@
     "prettier:scss": "prettier src/**/*.scss --write",
     "prettier:js": "prettier src/**/*.js --write",
     "lint:js": "eslint --fix src/**/*.js",
+    "lint:scss": "stylelint --fix src/**/*.scss",
     "start": "gulp"
   },
   "jshintConfig": {
@@ -54,13 +55,29 @@
       "prettier/prettier": "error"
     }
   },
+  "stylelint": {
+    "extends": [
+      "stylelint-prettier/recommended",
+      "stylelint-config-recess-order"
+    ],
+    "syntax": "scss",
+    "plugins": [
+      "stylelint-prettier",
+      "stylelint-scss"
+    ],
+    "rules": {
+      "prettier/prettier": true,
+      "color-hex-length": "short",
+      "length-zero-no-unit": true
+    }
+  },
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
     "useTabs": false,
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "all",
+    "trailingComma": "es5",
     "bracketSpacing": true,
     "arrowParens": "avoid"
   },
@@ -79,8 +96,14 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
+    "gulp-stylelint": "^8.0.0",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2",
+    "stylelint": "^9.9.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recess-order": "^2.0.1",
+    "stylelint-prettier": "^1.0.5",
+    "stylelint-scss": "^3.4.3",
     "webpack": "^4.27.1",
     "webpack-stream": "^5.2.1"
   },
