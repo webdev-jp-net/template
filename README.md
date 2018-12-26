@@ -100,6 +100,8 @@ root
 -  `gulp-plumber` ... エラーでgulpのpipeを止めない (https://www.npmjs.com/package/gulp-plumber)
 -  `gulp-notify` ... デスクトップ通知 (https://www.npmjs.com/package/gulp-notify)
 
+-  `cross-env` ... 環境変数の設定 (https://www.npmjs.com/package/cross-env)
+
 ### clean
 
 データの削除に使用
