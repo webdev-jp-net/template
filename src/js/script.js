@@ -13,5 +13,6 @@ const cl = str => {
 
 cl(sample);
 cl(`filter"a" ... ${filterSample} / find"a" ... ${findSample}`);
+cl(`mode ... ${process.env.NODE_ENV}`);
 
-Promise.resolve().then(res => console.log("Promise") );
+Promise.resolve().then(res => console.log('Promise'));
