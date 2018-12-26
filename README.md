@@ -33,13 +33,13 @@ $ npm run release
 ESLint
 
 ```
-$ lint:js
+$ npm run lint:js
 ```
 
 StyleLint
 
 ```
-$ int:scss
+$ npm run lint:scss
 ```
 
 
