@@ -14,17 +14,32 @@ $ npm install
 
 ### Run
 
-development mode
+#### development mode
 
 ```
 $ npm start
 ```
 
 
-release mode
+#### release mode
 
 ```
 $ npm run release
+```
+
+
+#### linter
+
+ESLint
+
+```
+$ lint:js
+```
+
+StyleLint
+
+```
+$ int:scss
 ```
 
 
