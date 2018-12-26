@@ -10,6 +10,7 @@ const browserSync = require('browser-sync');
 
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const gulpStylelint = require('gulp-stylelint');
 
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
@@ -46,7 +47,7 @@ gulp.task('copy:static', () =>
   gulp
     .src([`static/**/*.*`])
     .pipe(gulp.dest(`preview`))
-    .pipe(browserSync.stream()),
+    .pipe(browserSync.stream())
 );
 
 // Html
@@ -70,6 +71,11 @@ gulp.task('style', () =>
       autoprefixer({
         browsers: ['ie >= 11', 'iOS >= 10', 'Android >= 4.4', 'last 1 versions'],
         cascade: false,
+      })
+    )
+    .pipe(
+      gulpStylelint({
+        fix: true,
       })
     )
     .pipe(gulp.dest(`preview/assets/css`))

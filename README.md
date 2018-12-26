@@ -120,10 +120,77 @@ root
 
 ## Linter & Formatter
 
-`esLint`でJavaScriptの構文チェックを行い、`Prettier`で書式を整理
+`ESLint`でJavaScriptの構文チェック、`StyleLint`でスタイルシートの構文チェックを行い  
+`Prettier`で書式を整理。
 
 -  `eslint` ... js構文チェック (https://www.npmjs.com/package/eslint)
--  `eslint-plugin-prettier` ... PrettierのルールをesLintに読み込む (https://www.npmjs.com/package/eslint-plugin-prettier)
--  `eslint-config-prettier` ... Prettierと重複したesLintルールを無効化 (https://www.npmjs.com/package/eslint-config-prettier)
+-  `eslint-plugin-prettier` ... PrettierのルールをESLintに読み込む (https://www.npmjs.com/package/eslint-plugin-prettier)
+-  `eslint-config-prettier` ... Prettierと重複したESLintルールを無効化 (https://www.npmjs.com/package/eslint-config-prettier)
 
 -  `prettier` ... 書式の整形 (https://www.npmjs.com/package/prettier)
+
+-  `styleLint` ... スタイルシート構文チェック (https://www.npmjs.com/package/stylelint)
+-  `stylelint-scss` ... Scss文法対応 (https://www.npmjs.com/package/stylelint-scss)
+-  `stylelint-config-recess-order` ... 並び順の規則 (https://www.npmjs.com/package/stylelint-config-recess-order)
+-  `stylelint-prettier` ... Prettierのルールでlint (https://www.npmjs.com/package/stylelint-prettier)
+-  `stylelint-config-prettier` ...　Prettierと重複したStyleLintルールを無効化 (https://www.npmjs.com/package/stylelint-config-prettier)
+
+-  `gulp-stylelint` ... gulpでStyleLintルールを実行 (https://www.npmjs.com/package/gulp-stylelint)
+
+### config
+
+#### Prettier
+
+```
+"prettier": {
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
+}
+```
+
+#### ESLint
+
+```
+"eslintConfig": {
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
+```
+
+#### SyuleLint
+
+```
+"stylelint": {
+  "extends": [
+    "stylelint-prettier/recommended",
+    "stylelint-config-recess-order"
+  ],
+  "syntax": "scss",
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "prettier/prettier": true, // Prettierのルール
+    "color-hex-length": "short", // HEX値が3桁にまるめられるなら修正
+    "length-zero-no-unit": true // 0の単位を省略
+  }
+}
+```
