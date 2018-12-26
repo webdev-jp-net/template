@@ -13,8 +13,6 @@
   ],
   "main": "gulpfile.js",
   "scripts": {
-    "prettier:scss": "prettier src/**/*.scss --write",
-    "prettier:js": "prettier src/**/*.js --write",
     "lint:js": "eslint --fix src/**/*.js",
     "lint:scss": "stylelint --fix src/**/*.scss",
     "start": "gulp"
