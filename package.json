@@ -89,6 +89,7 @@
     "browser-sync": "^2.26.7",
     "cross-env": "^5.2.0",
     "delete-empty": "^2.0.0",
+    "dotenv": "^8.2.0",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
