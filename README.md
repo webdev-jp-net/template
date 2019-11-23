@@ -102,64 +102,67 @@ root
 
 `gulp`ベースの開発環境。
 
-- `gulp` ... ver4 (https://www.npmjs.com/package/gulp)
+- [gulp](https://www.npmjs.com/package/gulp) ... ver4
 
-- `gulp-plumber` ... エラーで gulp の pipe を止めない (https://www.npmjs.com/package/gulp-plumber)
-- `gulp-notify` ... デスクトップ通知 (https://www.npmjs.com/package/gulp-notify)
+- [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) ... エラーで gulp の pipe を止めない
+- [gulp-notify](https://www.npmjs.com/package/gulp-notify) ... デスクトップ通知
 
-- `cross-env` ... 環境変数の設定 (https://www.npmjs.com/package/cross-env)
-- `dotenv` ... .env 参照 (https://www.npmjs.com/package/dotenv)
+- [cross-env](https://www.npmjs.com/package/cross-env) ... 環境変数の設定
+- [dotenv](https://www.npmjs.com/package/dotenv) ... .env 参照
 
 ### clean
 
 データの削除に使用
 
-- `rimraf` ... データ削除 (https://www.npmjs.com/package/rimraf)
-- `delete-empty` ... 空ディレクトリ削除 (https://www.npmjs.com/package/delete-empty)
+- [rimraf](https://www.npmjs.com/package/rimraf) ... データ削除
+- [delete-empty](https://www.npmjs.com/package/delete-empty) ... 空ディレクトリ削除
 
 ### server
 
 サーバを構築するとともに、更新をリアルタイム反映。
 
-- `browser-sync` ... サーバ (https://www.npmjs.com/package/browser-sync)
+- [browser-sync](https://www.npmjs.com/package/browser-sync) ... サーバ
 
 ### style
 
 `scss`で定義したスタイルを css へ変換
 
-- `gulp-sass` ... Sass をコンパイル (https://www.npmjs.com/package/gulp-sass)
-- `gulp-autoprefixer` ... ベンダープレフィックス付与 (https://www.npmjs.com/package/gulp-autoprefixer)
+- [gulp-sass](https://www.npmjs.com/package/gulp-sass) ... `Sass`をコンパイル
+- [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) ... ベンダープレフィックス付与
 
 ### script
 
 `babel`でトランスパイル。polyfill 設定をシンプルにする目的で`webpack`を通している。
 
-- `@babel/core` ... ver7 (https://www.npmjs.com/package/@babel/core)
-- `@babel/polyfill` ... polyfill (https://www.npmjs.com/package/@babel/polyfill)
-- `@babel/preset-env` ... トランスパイルのターゲットを設定 (https://www.npmjs.com/package/@babel/preset-env)
+- [@babel/core](https://www.npmjs.com/package/@babel/core) ... ver7
+- [@babel/polyfill](https://www.npmjs.com/package/@babel/polyfill) ... polyfill
+- [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env) ... トランスパイルのターゲットを設定
 
-* `webpack` ... ver4 (https://www.npmjs.com/package/webpack)
-* `webpack-stream` ... gulp で webpack を使う (https://www.npmjs.com/package/webpack-stream)
-* `babel-loader` ... webpack で\*.js を babel でトランスパイルするよう紐付ける (https://www.npmjs.com/package/babel-loader)
+- [webpack](https://www.npmjs.com/package/webpack) ... ver4
+- [webpack-stream](https://www.npmjs.com/package/webpack-stream) ... `gulp`で`webpack`を使う
+- [babel-loader](https://www.npmjs.com/package/babel-loader) ... `webpack`で\*.js を`babel`でトランスパイルするよう紐付ける
 
 ## Linter & Formatter
 
 `ESLint`で JavaScript の構文チェック、`StyleLint`でスタイルシートの構文チェックを行い  
 `Prettier`で書式を整理。
 
-- `eslint` ... js 構文チェック (https://www.npmjs.com/package/eslint)
-- `eslint-plugin-prettier` ... Prettier のルールを ESLint に読み込む (https://www.npmjs.com/package/eslint-plugin-prettier)
-- `eslint-config-prettier` ... Prettier と重複した ESLint ルールを無効化 (https://www.npmjs.com/package/eslint-config-prettier)
+- [eslint](https://www.npmjs.com/package/eslint) ... JavaScript の構文チェック
+- [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) ... `Prettier`のルールを`ESLint`に読込
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier) ... `Prettier`と重複した`ESLint`ルールを無効化
+- [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) ... `Airbub`のルールを`ESLint`に読込
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) ... `import/export`構文に対応
 
-- `prettier` ... 書式の整形 (https://www.npmjs.com/package/prettier)
+- [prettier](https://www.npmjs.com/package/prettier) ... 書式の整形
 
-- `styleLint` ... スタイルシート構文チェック (https://www.npmjs.com/package/stylelint)
-- `stylelint-scss` ... Scss 文法対応 (https://www.npmjs.com/package/stylelint-scss)
-- `stylelint-config-recess-order` ... 並び順の規則 (https://www.npmjs.com/package/stylelint-config-recess-order)
-- `stylelint-prettier` ... Prettier のルールで lint (https://www.npmjs.com/package/stylelint-prettier)
-- `stylelint-config-prettier` ...　 Prettier と重複した StyleLint ルールを無効化 (https://www.npmjs.com/package/stylelint-config-prettier)
+- [styleLint](https://www.npmjs.com/package/stylelint) ... スタイルシート構文チェック
+- [stylelint-scss](https://www.npmjs.com/package/stylelint-scss) ... `Scss`文法対応
+- [stylelint-order](https://www.npmjs.com/package/stylelint-order) ... 任意の並び順を設定
+- [stylelint-config-recess-order](https://www.npmjs.com/package/stylelint-config-recess-order) ... `Recess`と `Bootstrap`の方法で並べ替えるルールを`StyleLint`に読込
+- [stylelint-prettier](https://www.npmjs.com/package/stylelint-prettier) ... `Prettier`のルールで lint
+- [stylelint-config-prettier](https://www.npmjs.com/package/stylelint-config-prettier) ...　 `Prettier`と重複した`StyleLint`ルールを無効化
 
-- `gulp-stylelint` ... gulp で StyleLint ルールを実行 (https://www.npmjs.com/package/gulp-stylelint)
+- [gulp-stylelint](https://www.npmjs.com/package/gulp-stylelint) ... `gulp`で`StyleLint`を実行
 
 ### config
 
@@ -167,13 +170,13 @@ root
 
 ```
 "prettier": {
-  "printWidth": 100,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
+  "printWidth": 100, // 100文字以上で改行
+  "tabWidth": 2, // インデント幅
+  "useTabs": false, //インデントにTabを許可
+  "semi": true, // 行末へ必ず;付与
+  "singleQuote": true, // カッコを''に統一
+  "trailingComma": "es5", // 行末の,
+  "bracketSpacing": true, // アロー関数のカッコ
   "arrowParens": "avoid"
 }
 ```
@@ -186,14 +189,18 @@ root
     "sourceType": "module"
   },
   "env": {
-    "browser": true,
-    "es6": true
+    "browser": true, // ブラウザ関連のグローバル変数を許可
+    "es6": true // ES6関連のグローバル変数を許可
   },
   "extends": [
-    "plugin:prettier/recommended"
+    "airbnb-base", // Airbub base のルールを読込
+    "plugin:prettier/recommended" // Prettierのルールを読込
+  ],
+  "plugins": [
+    "import" // import/export対応プラグインを読込
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error" // Prettierのルールを読込
   }
 }
 ```
@@ -203,18 +210,26 @@ root
 ```
 "stylelint": {
   "extends": [
-    "stylelint-prettier/recommended",
-    "stylelint-config-recess-order"
+    "stylelint-prettier/recommended", // Prettierのルールを読込
+    "stylelint-config-recess-order" // Recess* Property Orderのルールを読込
   ],
   "syntax": "scss",
   "plugins": [
-    "stylelint-prettier",
-    "stylelint-scss"
+    "stylelint-scss", // scss対応プラグインを読込
+    "stylelint-order", // 任意の並び順設定プラグインを読込
+    "stylelint-prettier" // Prettierプラグインを読込
   ],
   "rules": {
-    "prettier/prettier": true, // Prettierのルール
-    "color-hex-length": "short", // HEX値が3桁にまるめられるなら修正
-    "length-zero-no-unit": true // 0の単位を省略
+    "prettier/prettier": true, // Prettierのルールを読込
+    "order/order": [ // 変数の要素を優先的に先頭へ
+      [
+        "dollar-variables",
+        "declarations",
+        "rules"
+      ]
+    ],
+    "color-hex-length": "short", // HEXの色指定を3桁にできる場合は丸める
+    "length-zero-no-unit": true // 0の値の単位を省略
   }
 }
 ```
