@@ -18,8 +18,14 @@ const webpackConfig = require('./webpack.config.js');
 
 // Server
 // --------------------
+require('dotenv').config();
+const httpsOption =
+  process.env.HTTPS_KEY !== undefined
+    ? { key: process.env.HTTPS_KEY, cert: process.env.HTTPS_CERT }
+    : false;
 gulp.task('server', cb => {
   browserSync.init({
+    https: httpsOption,
     port: 8080,
     weinre: {
       port: 9090,
