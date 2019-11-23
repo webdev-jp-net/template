@@ -54,7 +54,7 @@ $ npm run lint:scss
 # Directory
 
 - `src` ... 開発用データ
-- `static` ... ライブラリなど、手を加えず読込データ
+- `static` ... ライブラリなど、手を加えず読み込むデータ
 - `preview` ... 開発時の build データ (バージョン管理対象外)
 - `htdocs` ... リリースデータ
 
@@ -108,6 +108,7 @@ root
 - [gulp-notify](https://www.npmjs.com/package/gulp-notify) ... デスクトップ通知
 
 - [cross-env](https://www.npmjs.com/package/cross-env) ... 環境変数の設定
+- [dotenv](https://www.npmjs.com/package/dotenv) ... .env 参照
 
 ### clean
 
