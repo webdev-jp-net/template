@@ -22,20 +22,17 @@
   "jshintConfig": {
     "esversion": 6
   },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "android >= 5.2"
+  ],
   "babel": {
     "presets": [
       [
         "@babel/preset-env",
         {
-          "useBuiltIns": "entry",
-          "targets": {
-            "browsers": [
-              "ie >= 11",
-              "iOS >= 10",
-              "android >= 4.4",
-              "last 1 versions"
-            ]
-          }
+          "useBuiltIns": "entry"
         }
       ]
     ]
